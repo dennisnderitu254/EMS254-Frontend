@@ -30,6 +30,9 @@ def dashboard():
 def transactions():
     return render_template('transactions.html')
 
+@app.route('/wallet')
+def wallet():
+    return render_template('wallet.html')
 
 
 
