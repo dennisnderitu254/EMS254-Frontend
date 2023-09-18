@@ -26,6 +26,11 @@ def dashboard():
     return render_template('dashboard.html')
 
 
+@app.route('/transactions')
+def transactions():
+    return render_template('transactions.html')
+
+
 
 
 if __name__ == '__main__':

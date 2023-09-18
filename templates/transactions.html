@@ -59,36 +59,35 @@
 </header>
 
 <main class="container mt-5">
-  <section class="transaction-history">
-      <h2>Transaction History</h2>
-      <!-- Display a list of the user's escrow transactions -->
-      <ul class="list-group">
-          <li class="list-group-item">
-              <strong>Transaction ID:</strong> ESC12345
-              <br>
-              <strong>Status:</strong> In Progress
-              <br>
-              <strong>Amount:</strong> $1,000.00
-          </li>
-          <!-- Add more transaction entries as needed -->
-      </ul>
-  </section>
+    <h1 class="mb-4">My Transactions</h1>
 
-  <section class="account-details mt-5">
-      <h2>Account Details</h2>
-      <!-- Display user account information -->
-      <p><strong>Name:</strong> John Doe</p>
-      <p><strong>Email:</strong> john.doe@example.com</p>
-      <p><strong>Balance:</strong> $5,000.00</p>
-      <!-- Include options to update account information, change password, etc. -->
-      <button class="btn btn-primary">Edit Profile</button>
-      <button class="btn btn-secondary">Change Password</button>
-  </section>
+    <!-- Table to display transactions -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Transaction ID</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>TX12345</td>
+                <td>2023-09-20</td>
+                <td>$500.00</td>
+                <td>Completed</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
 </main>
 
 <footer class="mt-5 text-center">
-  <p>&copy; 2023 EMS254</p>
-</footer>
+    <p>&copy; 2023 EMS254</p>
+  </footer>
 
 
 <!-- Include Bootstrap JavaScript and jQuery (Optional, if needed) -->
@@ -98,3 +97,6 @@
 -->
 </body>
 </html>
+
+
+
