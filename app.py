@@ -34,6 +34,11 @@ def transactions():
 def wallet():
     return render_template('wallet.html')
 
+@app.route('/ac')
+@app.route('/accountsettings')
+def accountsettings():
+    return render_template('accountsettings.html')
+
 
 
 if __name__ == '__main__':
