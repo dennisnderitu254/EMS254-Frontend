@@ -6,6 +6,7 @@
   <title>EMS User Dashboard</title>
   <!-- Add Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+iN4dXn5s5puhQGq6x9k9y7mFkf4k+i5mM5f5gy" crossorigin="anonymous">
   <style>
     /* Custom CSS for Navbar */
     .navbar-custom {
@@ -29,3 +30,70 @@
   </style>
 </head>
 
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Escrow System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Transactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5">
+  <section class="transaction-history">
+      <h2>Transaction History</h2>
+      <!-- Display a list of the user's escrow transactions -->
+      <ul class="list-group">
+          <li class="list-group-item">
+              <strong>Transaction ID:</strong> ESC12345
+              <br>
+              <strong>Status:</strong> In Progress
+              <br>
+              <strong>Amount:</strong> $1,000.00
+          </li>
+          <!-- Add more transaction entries as needed -->
+      </ul>
+  </section>
+
+  <section class="account-details mt-5">
+      <h2>Account Details</h2>
+      <!-- Display user account information -->
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john.doe@example.com</p>
+      <p><strong>Balance:</strong> $5,000.00</p>
+      <!-- Include options to update account information, change password, etc. -->
+      <button class="btn btn-primary">Edit Profile</button>
+      <button class="btn btn-secondary">Change Password</button>
+  </section>
+</main>
+
+<footer class="mt-5">
+  <p>&copy; 2023 Escrow System</p>
+</footer>
+
+<!-- Include Bootstrap JavaScript and jQuery (Optional, if needed) -->
+<!-- For example:
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+iN4dXn5s5puhQGq6x9k9y7mFkf4k+i5mM5f5gy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Jnujsl5+iN4dXn5s5puhQGq6x9k9y7mFkf4k+i5mM5f5gy" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
