@@ -1,0 +1,12 @@
+/* Custom CSS for Navbar */
+.navbar-custom {
+  background-color: #045BDE;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+.navbar-custom .nav-link {
+  color: white !important;
+}
