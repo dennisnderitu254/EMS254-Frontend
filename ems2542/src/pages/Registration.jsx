@@ -11,26 +11,31 @@ function Registration() {
           <Form>
             <Form.Group className="mb-4">
               <Form.Label>Your Name</Form.Label>
-              <Form.Control size="md" type="text" placeholder="Your Name" />
+              <Form.Control size="md" type="text" placeholder="Your Name" required />
             </Form.Group>
 
             <Form.Group className="mb-4">
               <Form.Label>Your Email</Form.Label>
-              <Form.Control size="md" type="email" placeholder="Your Email" />
+              <Form.Control size="md" type="email" placeholder="Your Email" required/>
+            </Form.Group>
+
+            <Form.Group className="mb-4">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control size="md" type="tel" placeholder="Phone number" required/>
             </Form.Group>
 
             <Form.Group className="mb-4">
               <Form.Label>Password</Form.Label>
-              <Form.Control size="md" type="password" placeholder="Password" />
+              <Form.Control size="md" type="password" placeholder="Password" required />
             </Form.Group>
 
             <Form.Group className="mb-4">
               <Form.Label>Repeat your password</Form.Label>
-              <Form.Control size="md" type="password" placeholder="Repeat Password" />
+              <Form.Control size="md" type="password" placeholder="Repeat Password" required/>
             </Form.Group>
 
             <Form.Group className="mb-4">
-              <Form.Check type="checkbox" id="flexCheckDefault" label="I agree all statements in Terms of service" />
+              <Form.Check type="checkbox" id="flexCheckDefault" label="I agree all statements in Terms of service" required />
             </Form.Group>
 
             <Button className='mb-4 w-100 gradient-custom-4' size='lg' type="submit">Register</Button>
