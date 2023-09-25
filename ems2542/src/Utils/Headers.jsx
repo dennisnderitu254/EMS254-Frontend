@@ -1,6 +1,6 @@
 class ApiService {
   constructor() {
-    this.baseUrl = 'http://127.0.0.1:5000/api/v1/views';
+    this.baseUrl = 'https://18bc-41-206-44-182.ngrok-free.app/api/v1/views';
   }
 
   async sendAuthorizedRequest(endpoint, method = 'GET', data = null) {

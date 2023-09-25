@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Card, Form, Button } from 'react-bootstrap';
 import ApiService from '../Utils/Headers';
 
@@ -6,6 +6,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
+  const [flashMessage, setFlashMessage] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -37,9 +38,29 @@ function Login() {
 
     } catch (error) {
       console.error('Login failed: ', error.message);
+      setEmail('');
+      setPassword('');
+      setPhoneNumber('');
+      setFlashMessage(error.message);
     }
   };
 
+    useEffect(() => {
+    let timeoutId;
+
+    if (flashMessage) {
+      timeoutId = setTimeout(() => {
+        setFlashMessage('');
+      }, 1000);
+    }
+
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [flashMessage]);
   return (
     <Container fluid className='d-flex align-items-center justify-content-center bg-image' style={{ backgroundImage: 'url(https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp)' }}>
       <div className='mask gradient-custom-3'></div>
@@ -64,8 +85,16 @@ function Login() {
 
             <Button className='mb-4 w-100 gradient-custom-4' size='lg' type="submit">Login</Button>
           </Form>
+          <div>
+            {flashMessage ? (
+            <div className="alert alert-danger mt-1">
+            {flashMessage}
+          </div>
+      ) : null}
+    </div>
         </Card.Body>
       </Card>
+
     </Container>
   );
 }
