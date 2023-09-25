@@ -4,10 +4,15 @@ import ApiService from '../Utils/Headers';
 
 function Login() {
   const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
@@ -20,15 +25,15 @@ function Login() {
     try {
       const response = await ApiService.sendUnAuthorizedRequest('login', 'POST', {
         email: email,
+        phoneNumber: phoneNumber,
         password: password,
-      });
+      }
+      );
       setEmail('');
       setPassword('');
-
-      const accessToken = response.access_token;
-
-      // Store the access token in local storage
-      localStorage.setItem('access-token', accessToken);
+      setPhoneNumber('');
+      
+      console.log(response)
 
     } catch (error) {
       console.error('Login failed: ', error.message);
@@ -45,6 +50,11 @@ function Login() {
             <Form.Group className="mb-4">
               <Form.Label>Email</Form.Label>
               <Form.Control size="md" type="text" placeholder="Email" value={email} onChange={handleEmailChange} />
+            </Form.Group>
+            <p className='text-center mb-10'>Or</p>
+            <Form.Group className="mb-4">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control size="md" type="text" placeholder="Phonenumber" value={phoneNumber} onChange={handlePhoneNumberChange} />
             </Form.Group>
 
             <Form.Group className="mb-4">
